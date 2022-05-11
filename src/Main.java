@@ -4,28 +4,29 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         StepTracker stepTracker = new StepTracker(scanner);
-        printMenu();
-        int userInput = scanner.nextInt();
 
 
-        while (userInput != 0) {
-            if (userInput == 1) {
-                stepTracker.saveSteps();
-
-            } else if (userInput == 2) {
-                stepTracker.statistics() ;
-
-            } else if (userInput == 3) {
-                stepTracker.newPurposeSteps() ;
-
-            } else {
-                System.out.println("Извините, такой команды пока нет.");
-            }
-
+        while (true) {
             printMenu();
-            userInput = scanner.nextInt();
+            int userInput = scanner.nextInt();
+            switch (userInput) {
+                case 1:
+                    stepTracker.saveSteps();
+                    break;
+                case 2:
+                    stepTracker.statistics();
+                    break;
+                case 3:
+                    stepTracker.newPurposeSteps();
+                    break;
+                case 0:
+                    System.out.println("Программа завершена");
+                    return;
+                default:
+                    System.out.println("Извините, такой команды пока нет.");
+                    break;
+            }
         }
-        System.out.println("Программа завершена");
     }
 
     private static void printMenu() {

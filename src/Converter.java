@@ -1,17 +1,15 @@
-import java.util.Scanner;
-
-/* public class Converter {
-
-
-    Converter( ) {
+public class Converter {
+    private final double STEP_KM = 0.00075;
+    private final double STEP_CAL = 0.50;
 
 
+    public double convertInKilometres(int sum) {
+
+        return sum * STEP_KM;
     }
 
+    public double convertInKilokalories(int sum) {
 
-    public static void convert() {
-
-        System.out.println("Количество пройденных киллометров: " + (  75) / 100000);
-        System.out.println("Количество сожженных килокалорий: " + (  50) / 1000);
+        return sum * STEP_CAL;
     }
-}*/
+}
