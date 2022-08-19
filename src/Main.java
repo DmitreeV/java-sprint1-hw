@@ -11,17 +11,22 @@ public class Main {
             int userInput = scanner.nextInt();
             switch (userInput) {
                 case 1:
+
                     stepTracker.saveSteps();
                     break;
                 case 2:
+
                     stepTracker.statistics();
                     break;
                 case 3:
+
                     stepTracker.newPurposeSteps();
                     break;
                 case 0:
+
                     System.out.println("Программа завершена");
                     return;
+
                 default:
                     System.out.println("Извините, такой команды пока нет.");
                     break;
